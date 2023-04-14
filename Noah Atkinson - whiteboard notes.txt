@@ -1,0 +1,36 @@
+//Algorithm that checks for uniqueness 
+
+//determines if all elements are unique
+//NO converting to array
+//No array methods
+//returns a Boolean
+
+Input: 'Hello'
+
+Output: False
+
+Input: "Copyright"
+
+Output: True
+
+
+function isUnique (string) {
+	const hashTable = {}; // empty hash table
+	for (let i = 0; i < string.length; i++) {
+		const char = string.charAt(i);
+  if (hashTable[char]) {
+  	return false; // character is already in hash table
+  }
+  hashTable[char] = true; // add character to hash table
+}
+return true;
+}
+
+----
+isUnique("Hello")
+
+Output: true
+
+isUnique("Copyright")
+
+Output: false
